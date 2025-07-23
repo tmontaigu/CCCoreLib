@@ -354,7 +354,7 @@ struct OrdinaryKrigeContext
 
 		nanoflann::KNNResultSet<double> resultSet(knn);
 		resultSet.init(kdIndexes.data(), kdDistances.data());
-		nanoflann::SearchParameters searchParams;
+		nanoflann::SearchParams searchParams;
 		searchParams.sorted = false;
 		if (false == kdTree->findNeighbors(resultSet, query.u, searchParams))
 		{
